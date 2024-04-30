@@ -48,6 +48,14 @@ kubeControllerManager:
     selector:
       matchLabels:
         component: kube-controller-manager
+awsNode:
+  enabled: true
+  service:
+    enabled: false
+  serviceMonitor:
+    selector:
+      matchLabels:
+        k8s-app: aws-node
 coreDns:
   service:
     enabled: false
